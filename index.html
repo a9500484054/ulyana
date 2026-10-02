@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f5f1">
+<title>30 дней движения вместе с Ульяной</title>
+
+<!-- apply saved theme before first paint to avoid a flash -->
+<script>
+(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Переключить тему">🌙</button>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hero-photo"><img src="cover.jpg" alt="Ульяна"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">мой личный подарок</p>
+      <h1>30 дней движения вместе со мной</h1>
+      <p class="lead">Без идеальности. Без «с понедельника». Просто каждый день выбрать маленькое движение для себя.</p>
+      <p class="note">Здесь нет обязательных тренировок. В какой-то день это может быть зарядка на 5 минут, в другой - танцы или прогулка. Главное - выбрать и сделать.</p>
+    </div>
+  </section>
+
+  <section class="story">
+    <h2>Почему я это сделала</h2>
+    <p>Два года я думала, что когда-нибудь куплю FitStars. Смотрела, как один блогер каждый день делает зарядки, и думала: «Вот бы и мне так».</p>
+    <p>Потом однажды снова сказала Лёше, что хочу приложение. И он ответил примерно так: <strong>«Так возьми и купи. Ты хочешь - бери».</strong></p>
+    <p>Я купила. И начала не с героических тренировок, а с пяти минут.</p>
+    <div class="story-photo"><img src="five_min.jpg" alt="Ульяна тренируется"></div>
+    <p>Пять минут оказались совсем не «слишком мало». Иногда после работы я лежала на диване и вообще не хотела двигаться. А потом включала короткую тренировку - и настроение менялось.</p>
+  </section>
+
+  <section class="story">
+    <h2>Даже в отпуске</h2>
+    <p>Я уезжала отдыхать, где вокруг был шведский стол и вообще много соблазнов. Но утром могла сделать свои пять минут перед завтраком.</p>
+    <div class="story-photo"><img src="vacation.jpg" alt="Ульяна в отпуске"></div>
+    <p>И мне нравилось не то, что я «идеально занималась». Мне нравилось ощущение: <strong>я снова выбрала себя.</strong></p>
+  </section>
+
+  <section class="story">
+    <h2>А потом стало интересно</h2>
+    <p>Я поняла, что движение бывает очень разным. Можно делать зарядку, растягиваться, танцевать, гулять. Иногда мне хочется спокойно потянуться. Иногда - включить музыку и танцевать.</p>
+    <div class="story-photo"><img src="dance.jpg" alt="Танцы"></div>
+    <p>Поэтому в этом календаре я не хочу заставлять тебя выполнять один правильный план. Я хочу дать выбор.</p>
+  </section>
+
+  <section class="proof">
+    <img src="proof60.png" alt="60 тренировок и подарок">
+    <div class="proof-copy">
+      <h2>60 тренировок - и я получила подарок</h2>
+      <p>Я специально поставила себе эту маленькую цель. Дошла до 60 тренировок и получила свои умные весы Picooc.</p>
+    </div>
+  </section>
+
+  <section class="proof">
+    <img src="proof70.jpg" alt="70 тренировок за сентябрь">
+    <div class="proof-copy">
+      <h2>Но самое интересное - я не остановилась</h2>
+      <p>После 60 я продолжила. В сентябре получилось 70 тренировок.</p>
+    </div>
+  </section>
+
+  <section class="progress-card" id="progress" aria-live="polite">
+    <div class="progress-row">
+      <span id="progressText">0 из 30 дней</span>
+      <span class="small" id="percent">0%</span>
+    </div>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+  </section>
+
+  <section id="days" aria-label="Календарь 30 дней"></section>
+
+  <section class="final" id="final">
+    <h2>Ты дошла до 30-го дня</h2>
+    <p>И вот что мне нравится больше всего: тебе больше не нужно начинать заново.</p>
+    <p><strong>Можно просто продолжать.</strong></p>
+    <img src="proof70.jpg" alt="Продолжаем двигаться">
+  </section>
+
+  <a class="toplink" href="#progress">Вернуться к календарю</a>
+</main>
+
+<footer>30 дней движения вместе с Ульяной</footer>
+
+<div class="toast-stack" id="toastStack" aria-live="assertive"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
