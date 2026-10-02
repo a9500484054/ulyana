@@ -118,7 +118,7 @@ function render() {
     const n = i + 1;
     const s = state["d" + n] || {};
     const el = document.createElement("article");
-    el.className = "day" + (s.option ? " done" : "") + " reveal";
+    el.className = "day" + (s.option ? " done" : "");
 
     el.innerHTML = `
       <div class="day-top">
@@ -148,14 +148,12 @@ function render() {
       save();
       render();
       if (!already) showToast(`День ${n} отмечен ✓`);
-      observeReveal();
     }));
 
     el.querySelectorAll(".mood button").forEach(b => b.addEventListener("click", () => {
       state["d" + n] = { ...(state["d" + n] || {}), mood: +b.dataset.m };
       save();
       render();
-      observeReveal();
     }));
 
     daysEl.appendChild(el);
@@ -184,7 +182,9 @@ function observeReveal() {
   });
 }
 
-document.querySelectorAll("section").forEach(el => el.classList.add("reveal"));
+// only the static narrative sections fade in on scroll — #days is
+// re-rendered on every click, so it must stay out of this system
+document.querySelectorAll("section:not(#days)").forEach(el => el.classList.add("reveal"));
 
 render();
 observeReveal();
